@@ -264,6 +264,17 @@ class _WelcomePageRealtimeState extends State<WelcomePageRealtime> {
     );
   }
 
+  Future<void> _logout() async {
+    await _authRepository.signOut();
+    if (mounted) {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (_) => const LoginPage()),
+            (route) => false,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     bool isUserConnected = _currentUser != null;
@@ -301,6 +312,11 @@ class _WelcomePageRealtimeState extends State<WelcomePageRealtime> {
                             await _loadUserData();
                           },
                           tooltip: 'Mon Profil',
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.logout,color: Colors.white, size: 28),
+                          onPressed: _logout,
+                          tooltip: 'Déconnexion',
                         ),
                       ] else ...[
                         IconButton(

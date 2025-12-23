@@ -116,7 +116,7 @@ class _ProfilePageState extends State<ProfilePage> {
         elevation: 0,
         actions: [
           IconButton(
-            icon: const Icon(Icons.logout),
+            icon: const Icon(Icons.logout,color: Colors.black, size: 28),
             onPressed: _logout,
             tooltip: 'Déconnexion',
           ),
