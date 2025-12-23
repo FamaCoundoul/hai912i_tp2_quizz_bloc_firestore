@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "questionText": "Quelle est la capitale de la France ?",
+    "isCorrect": true,
+    "theme": "Géographie",
+    "difficulty": 1,
+    "image": "./images/france.jpeg",
+    "options": ["Paris", "Lyon", "Marseille", "Bordeaux"],
+    "correctAnswer": "Paris"
+  },
+  {
+    "id": "2",
+    "questionText": "Le Mont-Blanc est le plus haut sommet d'Europe.",
+    "isCorrect": false,
+    "theme": "Géographie",
+    "difficulty": 2,
+    "image": "./images/montagne.jpeg",
+    "options": ["Vrai", "Faux"],
+    "correctAnswer": "Faux"
+  }
+  ]
